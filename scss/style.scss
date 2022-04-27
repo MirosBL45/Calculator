@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    margin: 0;
+    background: linear-gradient(to right, hsl(61, 100%, 50%), hsl(285, 100%, 50%));
+}
+
+.calculator-wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-wrapper > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background: rgba(255, 255, 255, 0.75);
+    transition: 0.2s;
+}
+
+.calculator-wrapper > button:hover {
+    background: hsl(285, 100%, 40%);
+    color: white;
+}
+
+.rasiri-dva {
+    grid-column: span 2;
+}
+
+.jednako-dugme {
+    background: hsl(120, 80%, 80%) !important;
+}
+
+.jednako-dugme:hover {
+    background: hsl(120, 80%, 50%) !important;
+}
+
+.clear-dugme {
+    background: hsl(0, 80%, 80%) !important;
+}
+
+.clear-dugme:hover {
+    background: hsl(0, 80%, 50%) !important;
+    color: hsl(60, 68%, 15%) !important;
+}
+
+.delete-dugme {
+    background: hsl(39, 80%, 80%) !important;
+}
+
+.delete-dugme:hover {
+    background: hsl(39, 80%, 50%) !important;
+}
+
+.rezultat {
+    grid-column: 1 / -1;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    .predhodni-rez {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 1.5rem;
+    }
+
+    .sadasnji-rez {
+        color: white;
+        font-size: 2.5rem;
+    }
+}
